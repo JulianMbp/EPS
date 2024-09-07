@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-eps",
+  "version": "1.0.0",
+  "description": "Este es una Web app para la administracion de una eps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grupo Camilo, Jhon, Julian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
