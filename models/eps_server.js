@@ -19,6 +19,7 @@ class Server{
         this.port = 3000; 
         this.paths = {
             citas: '/api/citas', 
+            encuesta: '/api/encuesta', 
         };
 
         this.middlewares();
@@ -35,6 +36,9 @@ class Server{
     routes(){
       
         this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
+        this.app.use(this.paths.encuesta, require('../routes/encuesta_satisfaccion.routes')); 
+
+          
     }
 
 
