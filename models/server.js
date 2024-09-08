@@ -20,6 +20,8 @@ class Server{
         this.paths = {
             citas: '/api/citas', 
             encuesta: '/api/encuesta', 
+            personal: '/api/personal',
+            paciente: '/api/paciente',
         };
 
         this.middlewares();
@@ -37,7 +39,8 @@ class Server{
       
         this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
         this.app.use(this.paths.encuesta, require('../routes/encuesta_satisfaccion.routes')); 
-
+        this.app.use(this.paths.paciente, require('../routes/user.routes'));
+        this.app.use(this.paths.personal, require('../routes/personal_routes'));
           
     }
 
