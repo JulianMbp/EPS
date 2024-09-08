@@ -32,7 +32,7 @@ class Server{
 
     routes(){
         this.app.use('/Paciente', require('../routes/user.routes'));
-
+        this.app.use('/Personal', require('../routes/personal_routes'));
 
     }
 
