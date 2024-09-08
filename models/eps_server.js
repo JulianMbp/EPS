@@ -2,11 +2,8 @@
  * @author EPS
  * @version 1.0.0
  * 
- * Servidor de express
- * Esta clase llama a los metodos necesarios para instanciar un servidor
- */
-/**
- * Importando variables
+ * Servidor de express para la gestión de Citas Médicas
+ * Esta clase inicia el servidor y define las rutas y middlewares
  */
 
 const express = require('express');
@@ -19,11 +16,27 @@ class Server{
 
     constructor(){
         this.app = express();
-        this.port = 3000;
-        this.path = '/api/';
+        this.port = 3000; 
+        this.paths = {
+            citas: '/api/citas', 
+        };
+
         this.middlewares();
         this.routes();
     }
+
+
+    middlewares(){
+      
+        this.app.use(express.json());
+    }
+
+  
+    routes(){
+      
+        this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
+    }
+
 
     listen(){
         this.app.listen(this.port, () => {

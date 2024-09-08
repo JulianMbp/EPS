@@ -9,7 +9,8 @@
   "author": "Grupo Camilo, Jhon, Julian",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "proyecto-eps": "file:"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
