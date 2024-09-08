@@ -31,7 +31,8 @@ class Server{
     }
 
     routes(){
-        this.app.use('/paciente', require('../routes/user.routes'));
+        this.app.use('/Paciente', require('../routes/user.routes'));
+
 
     }
 
