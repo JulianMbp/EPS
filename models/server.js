@@ -16,12 +16,14 @@ class Server{
 
     constructor(){
         this.app = express();
-        this.port = 3000; 
+        this.port = 3000;
         this.paths = {
-            citas: '/api/citas', 
-            encuesta: '/api/encuesta', 
+            citas: '/api/citas',
+            encuesta: '/api/encuesta',
             personal: '/api/personal',
             paciente: '/api/paciente',
+            farmacia: '/api/farmacia',
+            facturacion: '/api/factuacion'
         };
 
         this.middlewares();
@@ -30,18 +32,14 @@ class Server{
 
 
     middlewares(){
-      
+
         this.app.use(express.json());
     }
-
-  
     routes(){
-      
         this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
         this.app.use(this.paths.encuesta, require('../routes/encuesta_satisfaccion.routes')); 
         this.app.use(this.paths.paciente, require('../routes/user.routes'));
         this.app.use(this.paths.personal, require('../routes/personal_routes'));
-          
     }
 
 
