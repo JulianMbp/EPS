@@ -3,7 +3,7 @@
  * @version 1.0.0
  *
  * Controlador de farmacia
- * Este archivo define los controladores del 
+ * Este archivo define los controladores del
  * inventario de la farmacia
  */
 const {response, request} = require('express');
@@ -101,6 +101,7 @@ const DeleteMedicamento = async(req=request, res=response)=>{
         result
     });
 };
+
 module.exports = {
     AddMedicamento,
     ShowMedicamentos,
