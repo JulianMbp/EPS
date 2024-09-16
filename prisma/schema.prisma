@@ -9,4 +9,34 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
-
+model Medicamento{
+  id Int @id @default(autoincrement())
+  nombre_medicamento String
+  descripcion String
+  cantidad_disponible Int
+  laboratorio String
+  fecha_vencimiento DateTime
+  precio Float
+  proveedor Proveedor[]
+}
+model Proveedor{
+  id    Int     @id @default(autoincrement())
+  medicamento Medicamento @relation(fields: [medicamentoID], references: [id])
+  medicamentoID Int
+  nombre String
+  telefono Int?
+  direccion String?
+}
+model factura{
+  id Int @id @default(autoincrement())
+  //falta paciente y empleado *Borrar cuando se cree la tabla*
+  //ID_paciente Paciente @relation(fields:[pacienteID], references: [id])
+  //pacienteID int
+  //ID_empleado empleado @relation(fields:[empleadoID], references: [id])
+  //empleadoID int
+  fecha_factura DateTime?
+  Total_factura Float
+  forma_pago String
+  descuento Float?
+  Eps_cubre Boolean @default(false)
+}
