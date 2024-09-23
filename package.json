@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "proyecto-eps": "file:"
   },
