@@ -16,7 +16,7 @@ class Server{
 
     constructor(){
         this.app = express();
-        this.port = 3000;
+        this.port = 3001;
         this.paths = {
             citas: '/api/citas',
             encuesta: '/api/encuesta',
