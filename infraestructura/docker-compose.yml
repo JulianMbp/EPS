@@ -15,7 +15,7 @@ services:
     build:
       context: ./APIS
     deploy:
-      replicas: 9
+      replicas: 10
       resources:
         limits:
           cpus: "0.2"
@@ -24,7 +24,7 @@ services:
           cpus: "0.1"
           memory: 256M
     ports:
-      - "3001-3010:3000"
+      - "3000-3010:3000"
     volumes:
       - ./APIS/EPS:/usr/userAPI
     networks:
@@ -42,7 +42,7 @@ services:
           cpus: "0.1"
           memory: 1GB
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_PASSWORD: 12345
     volumes:
