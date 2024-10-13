@@ -33,3 +33,4 @@ COPY EPS /usr/userAPI
 RUN prisma generate
 
 CMD [ "nodemon", "app.js" ]
+

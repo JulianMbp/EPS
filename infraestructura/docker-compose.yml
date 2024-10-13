@@ -24,7 +24,7 @@ services:
           cpus: "0.1"
           memory: 256M
     ports:
-      - "3000-3010:3000"
+      - "3000-3010"
     volumes:
       - ./APIS/EPS:/usr/userAPI
     networks:
