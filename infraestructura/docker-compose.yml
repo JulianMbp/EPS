@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
 
@@ -31,7 +31,9 @@ services:
       - dev_network
 
   db_dev:
-    image: postgres
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres_audit
     container_name: eps_db_dev
     deploy:
       resources:
@@ -46,7 +48,10 @@ services:
     environment:
       POSTGRES_PASSWORD: 12345
     volumes:
-      - ./users_data_dev:/var/lib/postgresql/data
+      - eps_db_data:/var/lib/postgresql/data
+      - ./pg_logs:/var/log/postgresql
+      - ./postgresql_configs/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./postgresql_configs/pg_hba.conf:/etc/postgresql/pg_hba.conf
     networks:
       - dev_network
 
@@ -64,3 +69,6 @@ services:
 networks:
   dev_network:
     driver: bridge
+
+volumes:
+  eps_db_data:
