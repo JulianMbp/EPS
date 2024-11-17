@@ -2,7 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const { response, request } = require('express');
 
-// Ver todas las citas
+
 const verCitas = async (req = request, res = response) => {
     try {
         const citas = await prisma.cita.findMany();
@@ -18,7 +18,7 @@ const verCitas = async (req = request, res = response) => {
 const programarCita = async (req = request, res = response) => {
     const { paciente, fecha, hora, motivo, medico } = req.body;
 
-    // Verificar que todos los campos requeridos estén presentes
+
     if (!paciente || !fecha || !hora || !motivo) {
         return res.status(400).json({
             message: "Faltan datos para programar la cita"
@@ -26,15 +26,15 @@ const programarCita = async (req = request, res = response) => {
     }
 
     try {
-        // Asegúrate de que la fecha esté en el formato correcto (ISO 8601)
+       
         const nuevaCita = await prisma.cita.create({
             data: {
                 paciente,
-                fecha: new Date(fecha),  // Convierte la fecha a formato Date
+                fecha: new Date(fecha),  
                 hora,
                 motivo,
                 estado: "programada",
-                medico: medico || null  // Si el médico no se proporciona, se deja como null
+                medico: medico || null 
             }
         });
 
@@ -47,13 +47,13 @@ const programarCita = async (req = request, res = response) => {
     }
 };
 
-// Cancelar una cita
+
 const cancelarCita = async (req = request, res = response) => {
     const { id } = req.params;
 
     try {
         const cita = await prisma.cita.update({
-            where: { id: Number(id) }, // Asegúrate de que el ID sea numérico
+            where: { id: Number(id) },
             data: { estado: "cancelada" }
         });
 
@@ -66,7 +66,7 @@ const cancelarCita = async (req = request, res = response) => {
     }
 };
 
-// Reprogramar una cita
+
 const reprogramarCita = async (req = request, res = response) => {
     const { id } = req.params;
     const { nuevaFecha, nuevaHora } = req.body;
@@ -75,8 +75,8 @@ const reprogramarCita = async (req = request, res = response) => {
         const cita = await prisma.cita.update({
             where: { id: Number(id) },
             data: {
-                fecha: nuevaFecha ? new Date(nuevaFecha) : undefined, // Cambia la fecha si se proporciona
-                hora: nuevaHora || undefined, // Cambia la hora si se proporciona
+                fecha: nuevaFecha ? new Date(nuevaFecha) : undefined, 
+                hora: nuevaHora || undefined,
                 estado: "reprogramada"
             }
         });
@@ -90,7 +90,7 @@ const reprogramarCita = async (req = request, res = response) => {
     }
 };
 
-// Asignar un médico a una cita
+
 const asignarMedico = async (req = request, res = response) => {
     const { id } = req.params;
     const { medico } = req.body;

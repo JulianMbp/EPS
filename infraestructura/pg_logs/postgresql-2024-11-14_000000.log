@@ -1,2 +1,0 @@
-2024-11-14 02:17:50.628 GMT [1] LOG:  received fast shutdown request
-2024-11-14 02:17:53.874 GMT [1] LOG:  aborting any active transactions

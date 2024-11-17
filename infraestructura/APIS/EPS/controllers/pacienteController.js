@@ -2,7 +2,8 @@ const { response, request } = require('express');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-// Mostrar todos los pacientes
+
+
 const ShowPacientes = async (req = request, res = response) => {
     try {
         const pacientes = await prisma.paciente.findMany();
@@ -12,7 +13,7 @@ const ShowPacientes = async (req = request, res = response) => {
     }
 };
 
-// Agregar un nuevo paciente
+
 const AddPacientes = async (req = request, res = response) => {
     const { nombre, apellido, fecha_nac, telefono, direccion, email } = req.body;
     
@@ -33,7 +34,7 @@ const AddPacientes = async (req = request, res = response) => {
     }
 };
 
-// Mostrar un paciente específico por ID
+
 const ShowPaciente = async (req = request, res = response) => {
     const { id } = req.params;
     
@@ -52,7 +53,7 @@ const ShowPaciente = async (req = request, res = response) => {
     }
 };
 
-// Editar los datos de un paciente
+
 const EditPacientes = async (req = request, res = response) => {
     const { id } = req.params;
     const { nombre, apellido, fecha_nac, telefono, direccion, email } = req.body;
@@ -75,7 +76,7 @@ const EditPacientes = async (req = request, res = response) => {
     }
 };
 
-// Eliminar un paciente
+
 const DeletePacientes = async (req = request, res = response) => {
     const { id } = req.params;
     

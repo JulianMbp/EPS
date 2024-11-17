@@ -14,17 +14,8 @@ services:
   users_api:
     build:
       context: ./APIS
-    deploy:
-      replicas: 9
-      resources:
-        limits:
-          cpus: "0.2"
-          memory: 512M
-        reservations:
-          cpus: "0.1"
-          memory: 256M
     ports:
-      - "3000-3010"
+      - "3000:3001"  # Mapeo explícito de puerto 3000
     volumes:
       - ./APIS/EPS:/usr/userAPI
     networks:
@@ -48,10 +39,9 @@ services:
     environment:
       POSTGRES_PASSWORD: 12345
     volumes:
-      - eps_db_data:/var/lib/postgresql/data
+      - infraestructura_eps_db_data:/var/lib/postgresql/data
       - ./pg_logs:/var/log/postgresql
       - ./postgresql_configs/postgresql.conf:/etc/postgresql/postgresql.conf
-      - ./postgresql_configs/pg_hba.conf:/etc/postgresql/pg_hba.conf
     networks:
       - dev_network
 
@@ -59,7 +49,7 @@ services:
     image: dpage/pgadmin4
     container_name: dev_pgadmin
     ports:
-      - 8888:80
+      - "8888:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: 12345
@@ -71,4 +61,6 @@ networks:
     driver: bridge
 
 volumes:
-  eps_db_data:
+  infraestructura_eps_db_data:
+    driver: local
+

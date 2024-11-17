@@ -2,11 +2,11 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const { response, request } = require('express');
 
-// Enviar una nueva encuesta
+
 const enviarEncuesta = async (req = request, res = response) => {
-    const { titulo, descripcion, preguntas } = req.body; // Asegúrate de enviar las preguntas al crear la encuesta
+    const { titulo, descripcion, preguntas } = req.body; 
     try {
-        // Crear la encuesta con las preguntas
+     
         const nuevaEncuesta = await prisma.encuesta.create({
             data: {
                 titulo,
@@ -14,10 +14,10 @@ const enviarEncuesta = async (req = request, res = response) => {
                 preguntas: {
                     create: preguntas.map(pregunta => ({
                         texto: pregunta.texto,
-                        tipo: pregunta.tipo, // Aquí pasas el tipo de pregunta
+                        tipo: pregunta.tipo, 
                         opciones: {
                             create: pregunta.opciones.map(opcion => ({
-                                texto: opcion // Crear opciones asociadas a la pregunta
+                                texto: opcion 
                             }))
                         }
                     }))
@@ -26,7 +26,7 @@ const enviarEncuesta = async (req = request, res = response) => {
             include: {
                 preguntas: {
                     include: {
-                        opciones: true // Incluye las opciones al devolver las preguntas
+                        opciones: true 
                     }
                 }
             }
@@ -42,15 +42,15 @@ const enviarEncuesta = async (req = request, res = response) => {
 
 
 
-// Registrar una respuesta para una encuesta
+
 const registrarRespuesta = async (req = request, res = response) => {
-    const { encuestaId, preguntaId, respuesta } = req.body; // Asegúrate de enviar el ID de la pregunta también
+    const { encuestaId, preguntaId, respuesta } = req.body; 
     try {
-        // Registrar la respuesta asociada a una encuesta y pregunta específicas
+   
         const nuevaRespuesta = await prisma.respuesta.create({
             data: {
                 encuestaId: parseInt(encuestaId),
-                preguntaId: parseInt(preguntaId), // Asocia la respuesta con una pregunta
+                preguntaId: parseInt(preguntaId),
                 respuesta
             }
         });
@@ -63,11 +63,11 @@ const registrarRespuesta = async (req = request, res = response) => {
     }
 };
 
-// Obtener estadísticas de las respuestas de una encuesta
+
 const obtenerEstadisticas = async (req = request, res = response) => {
     const { encuestaId } = req.params;
     try {
-        // Obtener estadísticas de respuestas agrupadas por el tipo de respuesta
+       
         const estadisticas = await prisma.respuesta.groupBy({
             by: ['respuesta'],
             where: { encuestaId: parseInt(encuestaId) },
@@ -84,13 +84,13 @@ const obtenerEstadisticas = async (req = request, res = response) => {
     }
 };
 
-// Obtener las encuestas pendientes (completadas == false)
+
 const obtenerEncuestasPendientes = async (req = request, res = response) => {
     try {
         const encuestasPendientes = await prisma.encuesta.findMany({
             where: { completada: false },
             include: {
-                preguntas: true // Incluye las preguntas de las encuestas pendientes
+                preguntas: true 
             }
         });
         res.json({
@@ -102,21 +102,21 @@ const obtenerEncuestasPendientes = async (req = request, res = response) => {
     }
 };
 
-// Eliminar una encuesta por su ID
+
 const eliminarEncuesta = async (req = request, res = response) => {
     const { id } = req.params;
     try {
-        // Primero eliminar las respuestas asociadas a la encuesta
+        
         await prisma.respuesta.deleteMany({
             where: { encuestaId: parseInt(id) },
         });
 
-        // Luego eliminar las preguntas asociadas a la encuesta
+       
         await prisma.pregunta.deleteMany({
             where: { encuestaId: parseInt(id) },
         });
 
-        // Finalmente, eliminar la encuesta
+       
         await prisma.encuesta.delete({
             where: { id: parseInt(id) },
         });
