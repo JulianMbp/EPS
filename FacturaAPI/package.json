@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-eps",
+  "version": "1.0.0",
+  "description": "Este es una Web app para la administracion de una eps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.21.1",
+    "prisma": "^5.22.0"
+  }
+}
