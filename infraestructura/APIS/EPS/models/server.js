@@ -40,6 +40,8 @@ class Server{
         this.app.use(this.paths.encuesta, require('../routes/encuesta_satisfaccion.routes')); 
         this.app.use(this.paths.paciente, require('../routes/user.routes'));
         this.app.use(this.paths.personal, require('../routes/personal_routes'));
+        this.app.use(this.paths.farmacia, require('../routes/farmacia.routes'));
+        this.app.use(this.paths.facturacion, require('../routes/facturacion.routes'));
     }
 
 

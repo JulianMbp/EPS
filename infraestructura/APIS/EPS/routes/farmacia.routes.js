@@ -12,11 +12,15 @@ const router = Router();
 /**
  * Metodos importados
  */
-const {ShowFarm} = require('../controllers/farmacia.controllers')
+const {ShowFarm, AddMedicamento,DeleteMedicamento,EditMedicamento,ShowMedicamentos} = require('../controllers/farmacia.controllers')
 
 /**
  * Rutas
  */
 router.get('/', ShowFarm);
+router.post('/', AddMedicamento);
+router.delete('/:id', DeleteMedicamento);
+router.put('/:id', EditMedicamento);
+router.get('/:id', ShowMedicamentos);
 
 module.exports = router;
