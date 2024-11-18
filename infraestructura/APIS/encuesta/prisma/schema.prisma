@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Encuesta {
+  id          Int        @id @default(autoincrement())
+  titulo      String
+  descripcion String?
+  fechaCreacion DateTime @default(now())
+  completada  Boolean    @default(false)
+  respuestas  Respuesta[]
+  preguntas   Pregunta[]  // Relación con preguntas
+}
+
+model Respuesta {
+  id          Int       @id @default(autoincrement())
+  encuestaId  Int
+  encuesta    Encuesta   @relation(fields: [encuestaId], references: [id])
+  preguntaId  Int
+  pregunta    Pregunta   @relation(fields: [preguntaId], references: [id]) // Relación con pregunta
+  respuesta   String     // La respuesta del usuario
+  fecha       DateTime   @default(now())
+}
+
+model Pregunta {
+  id          Int        @id @default(autoincrement())
+  texto       String     // El texto de la pregunta
+  tipo        String     
+  encuestaId  Int
+  encuesta    Encuesta   @relation(fields: [encuestaId], references: [id])
+  opciones    Opcion[]   // Relación con las opciones posibles
+  respuestas  Respuesta[] // Relación con las respuestas
+}
+
+model Opcion {
+  id        Int      @id @default(autoincrement())
+  texto     String   // Texto de la opción
+  preguntaId Int
+  pregunta  Pregunta @relation(fields: [preguntaId], references: [id]) // Relación con pregunta
+}
+
+
