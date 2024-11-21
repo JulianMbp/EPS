@@ -1,47 +1,39 @@
-/**
- * @author EPS
- * @version 1.0.0
- * 
- * Servidor de express para la gestión de Citas Médicas
- * Esta clase inicia el servidor y define las rutas y middlewares
- */
-
 const express = require('express');
+const cors = require('cors');
 
-/**
- * @class Server
- * clase servidor que inicia el servicio de express
- */
-class Server{
+class Server {
+  constructor() {
+    this.app = express();
+    this.port = 3100;
+    this.paths = {
+      citas: '/api/citas',
+    };
 
-    constructor(){
-        this.app = express();
-        this.port = 3100;
-        this.paths = {
-            citas: '/api/citas'
-           
-        };
+    this.middlewares();
+    this.routes();
+  }
 
-        this.middlewares();
-        this.routes();
-    }
+  middlewares() {
+    // Opciones de configuración de CORS
+    const corsOptions = {
+      origin: 'http://localhost:3000', // Dirección de tu frontend
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+    };
 
+    this.app.use(cors(corsOptions)); // Configuración avanzada de CORS
+    this.app.use(express.json());   // Middleware para parsear JSON
+  }
 
-    middlewares(){
-        
-        this.app.use(express.json());
-    }
-    routes(){
-        this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
+  routes() {
+    this.app.use(this.paths.citas, require('../routes/citas_medicas.routes'));
+  }
 
-    }
-
-
-    listen(){
-        this.app.listen(this.port, () => {
-            console.log(`Servidor funcionando en el puerto: ${this.port}`); 
-        });
-    }
+  listen() {
+    this.app.listen(this.port, () => {
+      console.log(`Servidor funcionando en el puerto: ${this.port}`);
+    });
+  }
 }
 
 module.exports = Server;

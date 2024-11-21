@@ -8,6 +8,8 @@
 
 const express = require('express');
 
+const cors = require('cors');
+
 /**
  * @class Server
  * clase servidor que inicia el servicio de express
@@ -29,8 +31,15 @@ class Server{
 
 
     middlewares(){
-
+        const corsOptions = {
+            origin: 'http://localhost:3000', 
+            methods: ['GET', 'POST', 'PUT', 'DELETE'],
+            allowedHeaders: ['Content-Type', 'Authorization'],
+        };
+      
+        this.app.use(cors(corsOptions)); 
         this.app.use(express.json());
+        
     }
     routes(){
  
