@@ -28,7 +28,7 @@ class Server{
 
 
     middlewares(){
-
+        
         this.app.use(express.json());
     }
     routes(){
