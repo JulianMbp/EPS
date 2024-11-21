@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
 
@@ -7,17 +7,113 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - users_api
+      - citas_api
+      - encuesta_api
+      - factura_api
+      - farmacia_api
+      - paciente_api
+      - personal_api
     networks:
       - dev_network
 
-  users_api:
+  citas_api:
     build:
       context: ./APIS
+      dockerfile: Dockerfile.citas
     ports:
-      - "3000:3001"  # Mapeo explícito de puerto 3000
+      - "3100:3100" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=citas
     volumes:
-      - ./APIS/EPS:/usr/userAPI
+      - ./APIS/citas:/citas/citasAPI
+
+
+    networks:
+      - dev_network
+
+  encuesta_api:
+    build:
+      context: ./APIS
+      dockerfile: Dockerfile.encuesta
+    ports:
+      - "3200:3200" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=encuesta
+    volumes:
+      - ./APIS/encuesta:/encuesta/encuestaAPI
+
+    networks:
+      - dev_network
+
+  factura_api:
+    build:
+      context: ./APIS
+      dockerfile: Dockerfile.factura
+    ports:
+      - "3300:3300" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=factura
+    volumes:
+      - ./APIS/factura:/factura/facturaAPI
+
+
+    networks:
+      - dev_network
+
+  farmacia_api:
+    build:
+      context: ./APIS
+      dockerfile: Dockerfile.factura
+    ports:
+      - "3400:3400" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=farmacia
+    volumes:
+      - ./APIS/farmacia:/farmacia/farmaciaAPI
+
+
+    networks:
+      - dev_network
+
+  paciente_api:
+    build:
+      context: ./APIS
+      dockerfile: Dockerfile.paciente
+    ports:
+      - "3500:3500" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=paciente
+    volumes:
+      - ./APIS/paciente:/paciente/pacienteAPI
+
+
+    networks:
+      - dev_network
+
+  personal_api:
+    build:
+      context: ./APIS
+      dockerfile: Dockerfile.personal
+    ports:
+      - "3600:3600" 
+
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345@db_dev:5432/postgres?schema=personal
+    volumes:
+      - ./APIS/personal:/personal/personalAPI
+
+
     networks:
       - dev_network
 
@@ -63,4 +159,3 @@ networks:
 volumes:
   infraestructura_eps_db_data:
     driver: local
-
