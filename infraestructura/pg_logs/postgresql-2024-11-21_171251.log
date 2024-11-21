@@ -1,0 +1,370 @@
+2024-11-21 17:12:51.623 GMT [1] LOG:  starting PostgreSQL 17.1 (Debian 17.1-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-11-21 17:12:51.719 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-11-21 17:12:51.720 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+2024-11-21 17:12:51.722 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-11-21 17:12:53.620 GMT [30] LOG:  database system was interrupted; last known up at 2024-11-21 16:36:56 GMT
+2024-11-21 17:12:53.818 GMT [30] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-21 17:12:57.919 GMT [30] LOG:  redo starts at 0/E25DE20
+2024-11-21 17:12:57.920 GMT [30] LOG:  invalid record length at 0/E25DE58: expected at least 24, got 0
+2024-11-21 17:12:57.920 GMT [30] LOG:  redo done at 0/E25DE20 system usage: CPU: user: 0.06 s, system: 0.00 s, elapsed: 0.29 s
+2024-11-21 17:12:58.022 GMT [28] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-21 17:12:59.218 GMT [28] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.597 s, total=0.900 s; sync files=2, longest=0.597 s, average=0.299 s; distance=0 kB, estimate=0 kB; lsn=0/E25DE58, redo lsn=0/E25DE58
+2024-11-21 17:12:59.321 GMT [1] LOG:  database system is ready to accept connections
+2024-11-21 17:14:54.620 GMT [34] LOG:  duration: 17.226 ms  parse s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:14:54.916 GMT [34] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:14:54.916 GMT [34] LOG:  duration: 294.593 ms  bind s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:14:54.916 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:14:54.917 GMT [34] LOG:  execute s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:14:54.917 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:14:54.917 GMT [34] LOG:  duration: 0.703 ms
+2024-11-21 17:15:18.965 GMT [34] LOG:  statement: SELECT 1
+2024-11-21 17:15:18.965 GMT [34] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:15:19.508 GMT [34] LOG:  duration: 543.536 ms
+2024-11-21 17:15:19.509 GMT [34] LOG:  AUDIT: SESSION,3,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:15:19.509 GMT [34] LOG:  duration: 0.198 ms  bind s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:15:19.509 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:15:19.509 GMT [34] LOG:  execute s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:15:19.509 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:15:19.509 GMT [34] LOG:  duration: 0.020 ms
+2024-11-21 17:15:19.543 GMT [34] LOG:  AUDIT: SESSION,4,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:15:19.543 GMT [34] LOG:  duration: 0.124 ms  bind s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:15:19.543 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:15:19.543 GMT [34] LOG:  execute s0: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:15:19.543 GMT [34] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:15:19.543 GMT [34] LOG:  duration: 0.046 ms
+2024-11-21 17:47:32.037 GMT [70] LOG:  duration: 14053.071 ms  parse s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:47:46.535 GMT [70] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:47:47.535 GMT [70] LOG:  duration: 13906.262 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:47:47.535 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:47:47.535 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:47:47.535 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:47:47.635 GMT [70] LOG:  duration: 100.260 ms
+2024-11-21 17:48:08.203 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:48:08.635 GMT [70] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:48:08.635 GMT [70] LOG:  duration: 432.093 ms
+2024-11-21 17:48:08.752 GMT [70] LOG:  AUDIT: SESSION,3,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:48:08.752 GMT [70] LOG:  duration: 0.179 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:08.752 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:08.752 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:08.752 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:08.752 GMT [70] LOG:  duration: 0.031 ms
+2024-11-21 17:48:33.689 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:48:33.689 GMT [70] LOG:  AUDIT: SESSION,4,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:48:33.689 GMT [70] LOG:  duration: 0.698 ms
+2024-11-21 17:48:33.690 GMT [70] LOG:  AUDIT: SESSION,5,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:48:33.690 GMT [70] LOG:  duration: 0.173 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:33.690 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:33.690 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:33.690 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:33.690 GMT [70] LOG:  duration: 0.056 ms
+2024-11-21 17:48:56.092 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:48:56.092 GMT [70] LOG:  AUDIT: SESSION,6,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:48:56.092 GMT [70] LOG:  duration: 0.223 ms
+2024-11-21 17:48:56.093 GMT [70] LOG:  AUDIT: SESSION,7,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:48:56.093 GMT [70] LOG:  duration: 0.093 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:56.093 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:56.093 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:56.093 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:56.093 GMT [70] LOG:  duration: 0.030 ms
+2024-11-21 17:48:56.498 GMT [70] LOG:  AUDIT: SESSION,8,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:48:56.498 GMT [70] LOG:  duration: 0.123 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:56.498 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:56.498 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:48:56.498 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:48:56.498 GMT [70] LOG:  duration: 0.020 ms
+2024-11-21 17:49:04.032 GMT [70] LOG:  AUDIT: SESSION,9,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:49:04.532 GMT [70] LOG:  duration: 906.242 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:49:04.532 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:49:04.532 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:49:04.532 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:49:04.832 GMT [70] LOG:  duration: 300.150 ms
+2024-11-21 17:49:57.349 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:49:57.349 GMT [70] LOG:  AUDIT: SESSION,10,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:49:57.349 GMT [70] LOG:  duration: 0.633 ms
+2024-11-21 17:49:57.350 GMT [70] LOG:  AUDIT: SESSION,11,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:49:57.350 GMT [70] LOG:  duration: 0.070 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:49:57.350 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:49:57.350 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:49:57.350 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:49:57.350 GMT [70] LOG:  duration: 0.061 ms
+2024-11-21 17:50:10.619 GMT [70] LOG:  AUDIT: SESSION,12,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:50:10.619 GMT [70] LOG:  duration: 0.205 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:50:10.619 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:50:10.619 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:50:10.619 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:50:10.619 GMT [70] LOG:  duration: 0.044 ms
+2024-11-21 17:50:10.827 GMT [70] LOG:  AUDIT: SESSION,13,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:50:10.827 GMT [70] LOG:  duration: 0.113 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:50:10.827 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:50:10.827 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:50:10.827 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:50:10.827 GMT [70] LOG:  duration: 0.067 ms
+2024-11-21 17:51:18.851 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:51:18.851 GMT [70] LOG:  AUDIT: SESSION,14,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:51:18.851 GMT [70] LOG:  duration: 0.430 ms
+2024-11-21 17:51:22.326 GMT [70] LOG:  duration: 2481.329 ms  parse s2: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 17:51:23.025 GMT [70] LOG:  duration: 499.328 ms  bind s2: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 17:51:23.025 GMT [70] DETAIL:  Parameters: $1 = 'camilp Pérez', $2 = '2024-11-12 10:30:00', $3 = '10:30 AM', $4 = 'Consulta general', $5 = 'programada', $6 = 'Dr. Juan'
+2024-11-21 17:51:23.226 GMT [70] LOG:  execute s2: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 17:51:23.226 GMT [70] DETAIL:  Parameters: $1 = 'camilp Pérez', $2 = '2024-11-12 10:30:00', $3 = '10:30 AM', $4 = 'Consulta general', $5 = 'programada', $6 = 'Dr. Juan'
+2024-11-21 17:51:23.640 GMT [70] LOG:  AUDIT: SESSION,15,1,WRITE,INSERT,,,"INSERT INTO ""citas"".""Cita"" (""paciente"",""fecha"",""hora"",""motivo"",""estado"",""medico"") VALUES ($1,$2,$3,$4,$5,$6) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 17:51:27.826 GMT [70] LOG:  duration: 4799.989 ms
+2024-11-21 17:51:36.320 GMT [70] LOG:  statement: SELECT 1
+2024-11-21 17:51:36.320 GMT [70] LOG:  AUDIT: SESSION,16,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:51:36.320 GMT [70] LOG:  duration: 0.233 ms
+2024-11-21 17:51:36.321 GMT [70] LOG:  AUDIT: SESSION,17,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:51:36.321 GMT [70] LOG:  duration: 0.058 ms  bind s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:51:36.321 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:51:36.321 GMT [70] LOG:  execute s1: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:51:36.321 GMT [70] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:51:36.426 GMT [70] LOG:  duration: 104.968 ms
+2024-11-21 17:53:00.117 GMT [28] LOG:  checkpoint starting: time
+2024-11-21 17:53:07.715 GMT [28] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.499 s, sync=0.003 s, total=7.900 s; sync files=4, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=1 kB; lsn=0/E25E488, redo lsn=0/E25E3F8
+2024-11-21 17:56:43.319 GMT [80] LOG:  duration: 3.745 ms  parse s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:43.408 GMT [80] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:56:43.408 GMT [80] LOG:  duration: 88.397 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:43.408 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:43.408 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:43.408 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:43.408 GMT [80] LOG:  duration: 0.112 ms
+2024-11-21 17:56:56.651 GMT [80] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:56:56.651 GMT [80] LOG:  duration: 0.214 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:56.651 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:56.651 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:56.651 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:56.651 GMT [80] LOG:  duration: 0.022 ms
+2024-11-21 17:56:56.727 GMT [80] LOG:  AUDIT: SESSION,3,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:56:56.727 GMT [80] LOG:  duration: 0.187 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:56.727 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:56.727 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:56:56.727 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:56:56.727 GMT [80] LOG:  duration: 0.036 ms
+2024-11-21 17:58:07.659 GMT [80] LOG:  statement: SELECT 1
+2024-11-21 17:58:07.659 GMT [80] LOG:  AUDIT: SESSION,4,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 17:58:07.671 GMT [80] LOG:  duration: 11.741 ms
+2024-11-21 17:58:07.672 GMT [80] LOG:  AUDIT: SESSION,5,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:58:07.672 GMT [80] LOG:  duration: 0.140 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:07.672 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:07.672 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:07.672 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:07.672 GMT [80] LOG:  duration: 0.040 ms
+2024-11-21 17:58:07.684 GMT [80] LOG:  AUDIT: SESSION,6,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:58:07.684 GMT [80] LOG:  duration: 0.133 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:07.684 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:07.684 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:07.684 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:07.684 GMT [80] LOG:  duration: 0.024 ms
+2024-11-21 17:58:21.413 GMT [80] LOG:  AUDIT: SESSION,7,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:58:21.413 GMT [80] LOG:  duration: 0.825 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:21.413 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:21.413 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:21.413 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:21.413 GMT [80] LOG:  duration: 0.096 ms
+2024-11-21 17:58:21.418 GMT [80] LOG:  AUDIT: SESSION,8,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 17:58:21.418 GMT [80] LOG:  duration: 0.113 ms  bind s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:21.418 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:21.418 GMT [80] LOG:  execute s3: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 17:58:21.418 GMT [80] DETAIL:  Parameters: $1 = '0'
+2024-11-21 17:58:21.418 GMT [80] LOG:  duration: 0.051 ms
+2024-11-21 18:03:44.164 GMT [88] LOG:  duration: 78.942 ms  parse s4: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:03:44.171 GMT [88] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:03:44.171 GMT [88] LOG:  duration: 6.323 ms  bind s4: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:03:44.171 GMT [88] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:03:44.171 GMT [88] LOG:  execute s4: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:03:44.171 GMT [88] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:03:44.172 GMT [88] LOG:  duration: 0.209 ms
+2024-11-21 18:04:11.621 GMT [88] LOG:  statement: SELECT 1
+2024-11-21 18:04:11.622 GMT [88] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:04:11.622 GMT [88] LOG:  duration: 0.724 ms
+2024-11-21 18:04:12.559 GMT [88] LOG:  duration: 268.398 ms  parse s5: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:13.271 GMT [90] LOG:  duration: 0.562 ms  parse s6: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.858 GMT [90] LOG:  duration: 1586.724 ms  bind s6: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.858 GMT [90] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.858 GMT [91] LOG:  duration: 0.430 ms  parse s7: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [90] LOG:  execute s6: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [90] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.958 GMT [88] LOG:  duration: 2386.559 ms  bind s5: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [88] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.958 GMT [88] LOG:  execute s5: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [88] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.958 GMT [88] LOG:  AUDIT: SESSION,3,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""medico"" = $1, ""estado"" = $2 WHERE (""citas"".""Cita"".""id"" = $3 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:04:14.958 GMT [90] LOG:  AUDIT: SESSION,1,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""medico"" = $1, ""estado"" = $2 WHERE (""citas"".""Cita"".""id"" = $3 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:04:14.958 GMT [91] LOG:  duration: 0.449 ms  bind s7: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [91] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.958 GMT [91] LOG:  execute s7: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:14.958 GMT [91] DETAIL:  Parameters: $1 = 'camio', $2 = 'medico asignado', $3 = '1'
+2024-11-21 18:04:14.958 GMT [91] LOG:  AUDIT: SESSION,1,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""medico"" = $1, ""estado"" = $2 WHERE (""citas"".""Cita"".""id"" = $3 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:04:17.958 GMT [88] LOG:  duration: 3000.104 ms
+2024-11-21 18:04:20.158 GMT [88] LOG:  AUDIT: SESSION,4,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:04:20.158 GMT [88] LOG:  duration: 0.270 ms  bind s4: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:04:20.158 GMT [88] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:04:20.158 GMT [88] LOG:  execute s4: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:04:20.158 GMT [88] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:04:20.158 GMT [88] LOG:  duration: 0.036 ms
+2024-11-21 18:04:20.258 GMT [90] LOG:  duration: 5399.856 ms
+2024-11-21 18:04:20.260 GMT [91] LOG:  duration: 5302.138 ms
+2024-11-21 18:04:20.759 GMT [93] LOG:  duration: 200.225 ms  parse s8: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:20.760 GMT [93] LOG:  duration: 0.840 ms  bind s8: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:20.760 GMT [93] DETAIL:  Parameters: $1 = 'cancelada', $2 = '1'
+2024-11-21 18:04:20.760 GMT [93] LOG:  execute s8: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:04:20.760 GMT [93] DETAIL:  Parameters: $1 = 'cancelada', $2 = '1'
+2024-11-21 18:04:20.760 GMT [93] LOG:  AUDIT: SESSION,1,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""estado"" = $1 WHERE (""citas"".""Cita"".""id"" = $2 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:04:20.760 GMT [93] LOG:  duration: 0.709 ms
+2024-11-21 18:05:06.495 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:05:06.495 GMT [93] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:05:06.495 GMT [93] LOG:  duration: 0.180 ms
+2024-11-21 18:05:06.565 GMT [93] LOG:  duration: 1.335 ms  parse s9: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:06.566 GMT [93] LOG:  duration: 0.255 ms  bind s9: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:06.566 GMT [93] DETAIL:  Parameters: $1 = 'camilo', $2 = '2024-11-08 00:00:00', $3 = '13:06', $4 = 'dolor', $5 = 'programada', $6 = NULL
+2024-11-21 18:05:06.566 GMT [93] LOG:  execute s9: INSERT INTO "citas"."Cita" ("paciente","fecha","hora","motivo","estado","medico") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:06.566 GMT [93] DETAIL:  Parameters: $1 = 'camilo', $2 = '2024-11-08 00:00:00', $3 = '13:06', $4 = 'dolor', $5 = 'programada', $6 = NULL
+2024-11-21 18:05:06.566 GMT [93] LOG:  AUDIT: SESSION,3,1,WRITE,INSERT,,,"INSERT INTO ""citas"".""Cita"" (""paciente"",""fecha"",""hora"",""motivo"",""estado"",""medico"") VALUES ($1,$2,$3,$4,$5,$6) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:05:06.567 GMT [93] LOG:  duration: 1.396 ms
+2024-11-21 18:05:12.950 GMT [93] LOG:  duration: 0.102 ms  parse s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:05:12.950 GMT [93] LOG:  AUDIT: SESSION,4,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:05:12.950 GMT [93] LOG:  duration: 0.107 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:05:12.950 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:05:12.950 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:05:12.950 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:05:12.950 GMT [93] LOG:  duration: 0.020 ms
+2024-11-21 18:05:26.615 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:05:26.615 GMT [93] LOG:  AUDIT: SESSION,5,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:05:26.615 GMT [93] LOG:  duration: 0.122 ms
+2024-11-21 18:05:26.616 GMT [93] LOG:  duration: 0.123 ms  parse s11: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:26.616 GMT [93] LOG:  duration: 0.148 ms  bind s11: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:26.616 GMT [93] DETAIL:  Parameters: $1 = 'camilo', $2 = 'medico asignado', $3 = '8'
+2024-11-21 18:05:26.616 GMT [93] LOG:  execute s11: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:05:26.616 GMT [93] DETAIL:  Parameters: $1 = 'camilo', $2 = 'medico asignado', $3 = '8'
+2024-11-21 18:05:26.616 GMT [93] LOG:  AUDIT: SESSION,6,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""medico"" = $1, ""estado"" = $2 WHERE (""citas"".""Cita"".""id"" = $3 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:05:26.624 GMT [93] LOG:  duration: 7.529 ms
+2024-11-21 18:06:01.883 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:06:01.883 GMT [93] LOG:  AUDIT: SESSION,7,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:06:01.883 GMT [93] LOG:  duration: 0.617 ms
+2024-11-21 18:06:01.884 GMT [93] LOG:  AUDIT: SESSION,8,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:06:01.884 GMT [93] LOG:  duration: 0.243 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:06:01.884 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:06:01.884 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:06:01.884 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:06:01.884 GMT [93] LOG:  duration: 0.046 ms
+2024-11-21 18:06:23.165 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:06:23.165 GMT [93] LOG:  AUDIT: SESSION,9,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:06:23.165 GMT [93] LOG:  duration: 0.196 ms
+2024-11-21 18:06:23.166 GMT [93] LOG:  duration: 0.157 ms  bind s8: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:06:23.166 GMT [93] DETAIL:  Parameters: $1 = 'cancelada', $2 = '8'
+2024-11-21 18:06:23.166 GMT [93] LOG:  execute s8: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:06:23.166 GMT [93] DETAIL:  Parameters: $1 = 'cancelada', $2 = '8'
+2024-11-21 18:06:23.166 GMT [93] LOG:  AUDIT: SESSION,10,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""estado"" = $1 WHERE (""citas"".""Cita"".""id"" = $2 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:06:23.186 GMT [93] LOG:  duration: 20.018 ms
+2024-11-21 18:06:42.261 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:06:42.261 GMT [93] LOG:  AUDIT: SESSION,11,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:06:42.261 GMT [93] LOG:  duration: 0.186 ms
+2024-11-21 18:06:42.262 GMT [93] LOG:  AUDIT: SESSION,12,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:06:42.262 GMT [93] LOG:  duration: 0.410 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:06:42.262 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:06:42.262 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:06:42.262 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:06:42.262 GMT [93] LOG:  duration: 0.058 ms
+2024-11-21 18:06:57.146 GMT [93] LOG:  duration: 0.248 ms  parse s12: UPDATE "citas"."Cita" SET "fecha" = $1, "hora" = $2, "estado" = $3 WHERE ("citas"."Cita"."id" = $4 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:06:57.146 GMT [93] LOG:  duration: 0.195 ms  bind s12: UPDATE "citas"."Cita" SET "fecha" = $1, "hora" = $2, "estado" = $3 WHERE ("citas"."Cita"."id" = $4 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:06:57.146 GMT [93] DETAIL:  Parameters: $1 = '2024-11-22 00:00:00', $2 = '13:08', $3 = 'reprogramada', $4 = '8'
+2024-11-21 18:06:57.146 GMT [93] LOG:  execute s12: UPDATE "citas"."Cita" SET "fecha" = $1, "hora" = $2, "estado" = $3 WHERE ("citas"."Cita"."id" = $4 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:06:57.146 GMT [93] DETAIL:  Parameters: $1 = '2024-11-22 00:00:00', $2 = '13:08', $3 = 'reprogramada', $4 = '8'
+2024-11-21 18:06:57.146 GMT [93] LOG:  AUDIT: SESSION,13,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""fecha"" = $1, ""hora"" = $2, ""estado"" = $3 WHERE (""citas"".""Cita"".""id"" = $4 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:06:57.146 GMT [93] LOG:  duration: 0.136 ms
+2024-11-21 18:07:01.282 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:07:01.282 GMT [93] LOG:  AUDIT: SESSION,14,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:07:01.282 GMT [93] LOG:  duration: 0.298 ms
+2024-11-21 18:07:01.283 GMT [93] LOG:  AUDIT: SESSION,15,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:07:01.283 GMT [93] LOG:  duration: 0.127 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:01.283 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:01.283 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:01.283 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:01.283 GMT [93] LOG:  duration: 0.037 ms
+2024-11-21 18:07:24.550 GMT [93] LOG:  statement: SELECT 1
+2024-11-21 18:07:24.550 GMT [93] LOG:  AUDIT: SESSION,16,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:07:24.550 GMT [93] LOG:  duration: 0.319 ms
+2024-11-21 18:07:24.551 GMT [93] LOG:  AUDIT: SESSION,17,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:07:24.551 GMT [93] LOG:  duration: 0.153 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:24.551 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:24.551 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:24.551 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:24.551 GMT [93] LOG:  duration: 0.026 ms
+2024-11-21 18:07:24.564 GMT [93] LOG:  AUDIT: SESSION,18,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:07:24.564 GMT [93] LOG:  duration: 0.409 ms  bind s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:24.564 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:24.564 GMT [93] LOG:  execute s10: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:07:24.564 GMT [93] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:07:24.564 GMT [93] LOG:  duration: 0.090 ms
+2024-11-21 18:07:58.950 GMT [28] LOG:  checkpoint starting: time
+2024-11-21 18:08:00.049 GMT [28] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.619 s, sync=0.015 s, total=1.298 s; sync files=4, longest=0.006 s, average=0.004 s; distance=2 kB, estimate=2 kB; lsn=0/E25EFB0, redo lsn=0/E25EF58
+2024-11-21 18:11:31.253 GMT [101] LOG:  duration: 0.976 ms  parse s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:11:31.254 GMT [101] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:11:31.254 GMT [101] LOG:  duration: 0.823 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:11:31.254 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:11:31.254 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:11:31.254 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:11:31.254 GMT [101] LOG:  duration: 0.042 ms
+2024-11-21 18:11:34.547 GMT [101] LOG:  AUDIT: SESSION,2,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:11:34.547 GMT [101] LOG:  duration: 0.176 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:11:34.547 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:11:34.547 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:11:34.547 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:11:34.547 GMT [101] LOG:  duration: 0.027 ms
+2024-11-21 18:12:17.415 GMT [101] LOG:  statement: SELECT 1
+2024-11-21 18:12:17.415 GMT [101] LOG:  AUDIT: SESSION,3,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:12:17.415 GMT [101] LOG:  duration: 0.271 ms
+2024-11-21 18:12:17.416 GMT [101] LOG:  duration: 0.125 ms  parse s14: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:17.416 GMT [101] LOG:  duration: 0.254 ms  bind s14: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:17.416 GMT [101] DETAIL:  Parameters: $1 = 'cancelada', $2 = '8'
+2024-11-21 18:12:17.416 GMT [101] LOG:  execute s14: UPDATE "citas"."Cita" SET "estado" = $1 WHERE ("citas"."Cita"."id" = $2 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:17.416 GMT [101] DETAIL:  Parameters: $1 = 'cancelada', $2 = '8'
+2024-11-21 18:12:17.416 GMT [101] LOG:  AUDIT: SESSION,4,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""estado"" = $1 WHERE (""citas"".""Cita"".""id"" = $2 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:12:17.417 GMT [101] LOG:  duration: 0.188 ms
+2024-11-21 18:12:21.211 GMT [101] LOG:  AUDIT: SESSION,5,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:12:21.211 GMT [101] LOG:  duration: 0.211 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:12:21.211 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:12:21.211 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:12:21.211 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:12:21.211 GMT [101] LOG:  duration: 0.027 ms
+2024-11-21 18:12:32.425 GMT [101] LOG:  statement: SELECT 1
+2024-11-21 18:12:32.425 GMT [101] LOG:  AUDIT: SESSION,6,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:12:32.425 GMT [101] LOG:  duration: 0.296 ms
+2024-11-21 18:12:32.427 GMT [101] LOG:  duration: 0.330 ms  parse s15: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:32.427 GMT [101] LOG:  duration: 0.182 ms  bind s15: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:32.427 GMT [101] DETAIL:  Parameters: $1 = 'jhon', $2 = 'medico asignado', $3 = '8'
+2024-11-21 18:12:32.427 GMT [101] LOG:  execute s15: UPDATE "citas"."Cita" SET "medico" = $1, "estado" = $2 WHERE ("citas"."Cita"."id" = $3 AND 1=1) RETURNING "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico"
+2024-11-21 18:12:32.427 GMT [101] DETAIL:  Parameters: $1 = 'jhon', $2 = 'medico asignado', $3 = '8'
+2024-11-21 18:12:32.427 GMT [101] LOG:  AUDIT: SESSION,7,1,WRITE,UPDATE,,,"UPDATE ""citas"".""Cita"" SET ""medico"" = $1, ""estado"" = $2 WHERE (""citas"".""Cita"".""id"" = $3 AND 1=1) RETURNING ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico""",<not logged>
+2024-11-21 18:12:32.427 GMT [101] LOG:  duration: 0.219 ms
+2024-11-21 18:12:39.609 GMT [101] LOG:  AUDIT: SESSION,8,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:12:39.609 GMT [101] LOG:  duration: 0.338 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:12:39.609 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:12:39.609 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:12:39.609 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:12:39.609 GMT [101] LOG:  duration: 0.061 ms
+2024-11-21 18:12:58.138 GMT [28] LOG:  checkpoint starting: time
+2024-11-21 18:12:58.552 GMT [28] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.111 s, sync=0.002 s, total=0.415 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=2 kB; lsn=0/E25F838, redo lsn=0/E25F7E0
+2024-11-21 18:14:16.114 GMT [101] LOG:  statement: SELECT 1
+2024-11-21 18:14:16.114 GMT [101] LOG:  AUDIT: SESSION,9,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:14:16.114 GMT [101] LOG:  duration: 0.268 ms
+2024-11-21 18:14:16.115 GMT [101] LOG:  AUDIT: SESSION,10,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:14:16.115 GMT [101] LOG:  duration: 0.215 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:16.115 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:16.115 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:16.115 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:16.115 GMT [101] LOG:  duration: 0.040 ms
+2024-11-21 18:14:39.430 GMT [101] LOG:  statement: SELECT 1
+2024-11-21 18:14:39.430 GMT [101] LOG:  AUDIT: SESSION,11,1,READ,SELECT,,,SELECT 1,<not logged>
+2024-11-21 18:14:39.430 GMT [101] LOG:  duration: 0.309 ms
+2024-11-21 18:14:39.431 GMT [101] LOG:  AUDIT: SESSION,12,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:14:39.432 GMT [101] LOG:  duration: 0.399 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:39.432 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:39.432 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:39.432 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:39.432 GMT [101] LOG:  duration: 0.082 ms
+2024-11-21 18:14:39.446 GMT [101] LOG:  AUDIT: SESSION,13,1,READ,SELECT,,,"SELECT ""citas"".""Cita"".""id"", ""citas"".""Cita"".""paciente"", ""citas"".""Cita"".""fecha"", ""citas"".""Cita"".""hora"", ""citas"".""Cita"".""motivo"", ""citas"".""Cita"".""estado"", ""citas"".""Cita"".""medico"" FROM ""citas"".""Cita"" WHERE 1=1 OFFSET $1",<not logged>
+2024-11-21 18:14:39.446 GMT [101] LOG:  duration: 0.122 ms  bind s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:39.446 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:39.446 GMT [101] LOG:  execute s13: SELECT "citas"."Cita"."id", "citas"."Cita"."paciente", "citas"."Cita"."fecha", "citas"."Cita"."hora", "citas"."Cita"."motivo", "citas"."Cita"."estado", "citas"."Cita"."medico" FROM "citas"."Cita" WHERE 1=1 OFFSET $1
+2024-11-21 18:14:39.446 GMT [101] DETAIL:  Parameters: $1 = '0'
+2024-11-21 18:14:39.446 GMT [101] LOG:  duration: 0.041 ms
