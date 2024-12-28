@@ -36,22 +36,16 @@ class Server{
             methods: ['GET', 'POST', 'PUT', 'DELETE'],
             allowedHeaders: ['Content-Type', 'Authorization'],
         };
-      
         this.app.use(cors(corsOptions)); 
         this.app.use(express.json());
         
     }
     routes(){
- 
         this.app.use(this.paths.encuesta, require('../routes/encuesta_satisfaccion.routes')); 
-<<<<<<< HEAD:infraestructura/APIS/EPS/models/server.js
         this.app.use(this.paths.paciente, require('../routes/user.routes'));
         this.app.use(this.paths.personal, require('../routes/personal_routes'));
         this.app.use(this.paths.farmacia, require('../routes/farmacia.routes'));
         this.app.use(this.paths.facturacion, require('../routes/facturacion.routes'));
-=======
-      
->>>>>>> 4ce86fe65ca784d8750cf6046ce02a3e971102ac:infraestructura/APIS/encuesta/models/server.js
     }
 
 

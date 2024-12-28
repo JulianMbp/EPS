@@ -1,0 +1,26 @@
+2024-12-28 19:21:42.266 GMT [48] LOG:  starting PostgreSQL 17.2 (Debian 17.2-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-12-28 19:21:42.266 GMT [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-12-28 19:21:42.268 GMT [52] LOG:  database system was shut down at 2024-12-28 19:21:42 GMT
+2024-12-28 19:21:42.270 GMT [48] LOG:  database system is ready to accept connections
+2024-12-28 19:21:42.375 GMT [58] LOG:  statement: SELECT 1 FROM pg_database WHERE datname = 'postgres' ;
+2024-12-28 19:21:42.376 GMT [58] LOG:  AUDIT: SESSION,1,1,READ,SELECT,,,SELECT 1 FROM pg_database WHERE datname = 'postgres',<not logged>
+2024-12-28 19:21:42.376 GMT [58] LOG:  duration: 0.511 ms
+2024-12-28 19:21:42.377 GMT [48] LOG:  received fast shutdown request
+2024-12-28 19:21:42.377 GMT [48] LOG:  aborting any active transactions
+2024-12-28 19:21:42.378 GMT [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+2024-12-28 19:21:42.454 GMT [50] LOG:  shutting down
+2024-12-28 19:21:42.454 GMT [50] LOG:  checkpoint starting: shutdown immediate
+2024-12-28 19:21:42.459 GMT [50] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.006 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/14E4F98, redo lsn=0/14E4F98
+2024-12-28 19:21:42.461 GMT [48] LOG:  database system is shut down
+2024-12-28 19:21:42.486 GMT [1] LOG:  starting PostgreSQL 17.2 (Debian 17.2-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-12-28 19:21:42.487 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-12-28 19:21:42.487 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+2024-12-28 19:21:42.487 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-12-28 19:21:42.489 GMT [64] LOG:  database system was shut down at 2024-12-28 19:21:42 GMT
+2024-12-28 19:21:42.490 GMT [1] LOG:  database system is ready to accept connections
+2024-12-28 19:22:32.292 GMT [1] LOG:  received fast shutdown request
+2024-12-28 19:22:32.295 GMT [1] LOG:  aborting any active transactions
+2024-12-28 19:22:32.299 GMT [1] LOG:  background worker "logical replication launcher" (PID 67) exited with exit code 1
+2024-12-28 19:22:32.301 GMT [62] LOG:  shutting down
+2024-12-28 19:22:32.305 GMT [62] LOG:  checkpoint starting: shutdown immediate
+2024-12-28 19:22:32.320 GMT [62] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.020 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/14E5048, redo lsn=0/14E5048
